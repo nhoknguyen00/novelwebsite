@@ -1,0 +1,3 @@
+mongodb+srv://nhoknguyen00:1472125514@cluster0-gntax.mongodb.net/mikeweb
+miketuannguyen@gmail.com
+1472125514a@
