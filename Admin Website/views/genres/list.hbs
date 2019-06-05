@@ -48,7 +48,7 @@
                                         <tbody>
                                         {{#each genreList}}
                                             <tr>
-                                                <td>{{this.name}}</td>
+                                                <td>{{this.name}}<a href="stories/list/genre/{{this._id}}"> <i class="fa fa-search fa-lg" aria-hidden="=true"></i> </a></td>
                                                 <td>{{this.info}}</td>
                                                 <td>
                                                     <a href="genres/update/{{this._id}}"> <i class="fa fa-pen fa-lg" aria-hidden="=true"></i> </a>

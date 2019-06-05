@@ -14,6 +14,26 @@ exports.story_list = async function(req,res)
     })
 };
 
+exports.story_list_by_author = async function(req,res)
+{
+    const storyList = await storyDAO.get_story_list_by_author(req.params.id);
+    const author = await authorDAO.get_author_by_id(storyList[0].author);
+    res.render('stories/list',{
+        pageTitle: 'Danh sách truyện của ' + author.name,
+        storyList: storyList
+    })
+};
+
+exports.story_list_by_genre = async function(req,res)
+{
+    const storyList = await storyDAO.get_story_list_by_genre(req.params.id);
+    const genre = await genreDAO.get_genre_by_id(storyList[0].genre);
+    res.render('stories/list',{
+        pageTitle: 'Danh sách truyện ' + genre.name,
+        storyList: storyList
+    })
+};
+
 exports.story_add_get = async function(req,res)
 {
     const authorList = authorDAO.get_author_list();

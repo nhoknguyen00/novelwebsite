@@ -1,7 +1,8 @@
 const Author = require('../author');
 
 exports.get_author_list = ()=>{
-    return Author.find();
+    var mysort = {name:1};
+    return Author.find().sort(mysort);
 };
 
 exports.get_author_by_id = id =>{

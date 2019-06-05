@@ -1,7 +1,8 @@
 const Genre = require('../genre');
 
 exports.get_genre_list = ()=>{
-    return Genre.find();
+    var mysort = {name:1};
+    return Genre.find().sort(mysort);
 };
 
 exports.get_genre_by_id = id =>{

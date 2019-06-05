@@ -47,7 +47,7 @@
                                         <tbody>
                                         {{#each authorList}}
                                             <tr>
-                                                <td>{{this.name}}</td>
+                                                <td>{{this.name}}<a href="stories/list/author/{{this._id}}"> <i class="fa fa-search fa-lg" aria-hidden="=true"></i> </a></td>
                                                 <td>{{this.info}}</td>
                                                 <td>
                                                     <a href="authors/update/{{this._id}}"> <i class="fa fa-pen fa-lg" aria-hidden="=true"></i> </a>

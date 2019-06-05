@@ -28,8 +28,26 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <a href="stories/add"><button type="button" class="btn btn-success">Thêm mới</button></a>
+                        <!--<div class="col-md-4">
+                            <a href="chapters/add"><button type="button" class="btn btn-success">Thêm mới</button></a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Action
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
+                            </div>
+                        </div>-->
+                        <a href="chapters/add"><button type="button" class="btn btn-success">Thêm mới</button></a>
                     </div>
+
                     </br>
                     <div class="row content">
                         <div class="panel-body">
@@ -39,22 +57,18 @@
                                         <thead>
                                         <tr>
                                             <th>Tên truyện</th>
-                                            <th>Thể loại</th>
-                                            <th>Tác giả</th>
-                                            <th>Lượt view</th>
+                                            <th>Tên chương</th>
                                             <th>Chức năng</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        {{#each storyList}}
+                                        {{#each chapterList}}
                                             <tr>
-                                                <td>{{this.name}}<a href="chapters/list/{{this._id}}"> <i class="fa fa-search fa-lg" aria-hidden="=true"></i> </a></td>
-                                                <td>{{this.genre.name}}</td>
-                                                <td>{{this.author.name}}</td>
-                                                <td>{{this.viewed}}</td>
+                                                <td>{{this.story.name}}<a href="chapters/list/{{this.story._id}}"> <i class="fa fa-search fa-lg" aria-hidden="=true"></i></a></td>
+                                                <td>{{this.name}}</td>
                                                 <td>
-                                                    <a href="stories/update/{{this._id}}"> <i class="fa fa-pen fa-lg" aria-hidden="=true"></i> </a>
-                                                    <a href="stories/delete/{{this._id}}" onclick="return confirm ('Bạn có chắc chắn muốn xóa ?');" > <i class="fa fa-trash fa-lg" aria-hidden="=true"></i></a>
+                                                    <a href="chapters/update/{{this._id}}"> <i class="fa fa-pen fa-lg" aria-hidden="=true"></i> </a>
+                                                    <a href="chapters/delete/{{this._id}}" onclick="return confirm ('Bạn có chắc chắn muốn xóa ?');" > <i class="fa fa-trash fa-lg" aria-hidden="=true"></i></a>
                                                 </td>
                                             </tr>
                                         {{/each}}

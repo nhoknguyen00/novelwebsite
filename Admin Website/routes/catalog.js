@@ -7,6 +7,7 @@ var userController = require('../controllers/userController');
 var authorController = require('../controllers/authorController');
 var genreController = require('../controllers/genreController');
 var storyController = require('../controllers/storyController');
+var chapterController = require('../controllers/chapterController');
 
 //User
 router.get('/users/list',userController.user_list);
@@ -30,10 +31,21 @@ router.get('/genres/delete/:id',genreController.genre_delete);
 
 //Story
 router.get('/stories/list',storyController.story_list);
+router.get('/stories/list/genre/:id',storyController.story_list_by_genre);
+router.get('/stories/list/author/:id',storyController.story_list_by_author);
 router.get('/stories/add',storyController.story_add_get);
 router.post('/stories/add',storyController.story_add_post);
 router.get('/stories/update/:id',storyController.story_update_get);
 router.post('/stories/update/:id',storyController.story_update_post);
 router.get('/stories/delete/:id',storyController.story_delete);
+
+//Chapter
+router.get('/chapters/list',chapterController.chapter_list);
+router.get('/chapters/list/:id',chapterController.chapter_list_by_story);
+router.get('/chapters/add',chapterController.chapter_add_get);
+router.post('/chapters/add',chapterController.chapter_add_post);
+router.get('/chapters/update/:id',chapterController.chapter_update_get);
+router.post('/chapters/update/:id',chapterController.chapter_update_post);
+router.get('/chapters/delete/:id',chapterController.chapter_delete);
 
 module.exports = router;
