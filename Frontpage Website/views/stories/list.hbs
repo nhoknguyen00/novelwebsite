@@ -1,0 +1,61 @@
+{{>header-area}}
+<!-- End header area -->
+{{>mainmenu}}
+
+<!-- Page content -->
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+
+        <div class="row">
+            {{#each storyList}}
+            <div class="col-md-6 col-sm-6">
+                <div class="single-shop-product">
+                        <div class="col-sm-4 col-md-4">
+                            <a href="stories/{{this.id}}"><img width="150" height="150" src="{{this.img}}" alt="" class="img-rounded img-responsive" /></a>
+                        </div>
+                        <div class="col-sm-8 col-md-8">
+                            <blockquote>
+                                <a style="color: black" href="stories/{{this.id}}">{{this.name}}</a>
+                                <a style="color: black" href="stories/list/author/{{this.author.id}}"><small><cite title="Source Title">{{this.author.name}}&nbsp;<span class="fa fa-pencil"></span></cite></small></a>
+                            </blockquote>
+                            <a style="color: black" href="stories/list/genre/{{this.genre.id}}"><i class="fa fa-book"></i>&nbsp;{{this.genre.name}}</a>
+                        </div>
+                </div>
+            </div>
+            </br>
+            {{/each}}
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-pagination text-center">
+                    <nav>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End page content -->
+
+{{>footer-top}}
+<!-- End footer top area -->
+{{>footer-bot}}
+<!-- End footer bottom area -->

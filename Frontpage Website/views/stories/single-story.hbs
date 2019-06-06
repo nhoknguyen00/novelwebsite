@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/single-story-css.css">
+{{>header-area}}
+<!-- End header area -->
+{{>site-branding-area}}
+<!-- End site branding area -->
+{{>mainmenu}}
+
+<!-- Page content -->
+<div class="container emp-profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="{{story.img}}" alt=""/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h2>{{story.name}}</h2>
+                    <strong>Tác giả:</strong><a style="color: black" href="authors/{{story.author.id}}">&nbsp;{{story.author.name}}&nbsp;</a>
+                    </br>
+                    <strong>Thể loại:</strong><a style="color: black" href="genres/{{story.genre.id}}">&nbsp;{{story.genre.name}}</a>
+                    </br>
+                    <div class="newlines">{{story.info}}</div>
+                    </br></br>
+                    <h4>Danh sách chương</h4>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+                <ul>
+                    {{#each chapterList}}
+                        <a style="color: black" href="chapters/{{this.id}}"><li>{{this.name}}</li></a>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+</div>
+<!-- End page content -->
+
+{{>footer-bot}}
+<!-- End footer bottom area -->

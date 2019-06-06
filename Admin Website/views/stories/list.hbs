@@ -41,7 +41,7 @@
                                             <th>Tên truyện</th>
                                             <th>Thể loại</th>
                                             <th>Tác giả</th>
-                                            <th>Lượt view</th>
+                                            <th>Tình trạng</th>
                                             <th>Chức năng</th>
                                         </tr>
                                         </thead>
@@ -51,7 +51,7 @@
                                                 <td>{{this.name}}<a href="chapters/list/{{this._id}}"> <i class="fa fa-search fa-lg" aria-hidden="=true"></i> </a></td>
                                                 <td>{{this.genre.name}}</td>
                                                 <td>{{this.author.name}}</td>
-                                                <td>{{this.viewed}}</td>
+                                                <td>{{this.finished}}</td>
                                                 <td>
                                                     <a href="stories/update/{{this._id}}"> <i class="fa fa-pen fa-lg" aria-hidden="=true"></i> </a>
                                                     <a href="stories/delete/{{this._id}}" onclick="return confirm ('Bạn có chắc chắn muốn xóa ?');" > <i class="fa fa-trash fa-lg" aria-hidden="=true"></i></a>

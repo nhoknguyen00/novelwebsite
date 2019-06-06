@@ -16,7 +16,7 @@ const storySchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Author'
     },
-    viewed: {type: Number, default: 0},
+    finished: {type: String, enum: ['Hoàn thành','Chưa hoàn thành']},
     img: String,
 });
 

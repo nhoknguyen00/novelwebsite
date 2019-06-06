@@ -88,7 +88,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true }, function(error) {
             '- Từ đó cuộc đời của Tiêu Viêm có những biến hóa gì? Gặp được các đại ngộ gì? Thân phận thật sự của Huân Nhi (thanh mai trúc mã lúc nhỏ của Tiêu Viêm) ra sao? Bí mật của gia tộc hắn là gì? Cùng theo dõi bộ truyện Đấu Phá Thương Khung để có thể giải đáp các thắc mắc này các bạn nhé!',
         genre: HuyenHuyen,
         author: ThienTamThoDau,
-        viewed: 44,
+        finished: 'Hoàn thành',
         img: 'img/dauphathuongkhung.jpg',
     });
 

@@ -55,8 +55,8 @@ exports.story_add_post = function(req,res) {
             info: req.body.info,
             genre: req.body.genre,
             author: req.body.author,
+            finished: req.body.finished,
             img: '/img/'+req.body.img,
-            viewed: 0
         });
         story.save(function(error){
             if(error) throw error;
@@ -86,6 +86,7 @@ exports.story_update_post = function(req,res)
         info: req.body.info,
         genre: req.body.genre,
         author: req.body.author,
+        finished: req.body.finished,
         img: '/img/'+req.body.img,
     });
 

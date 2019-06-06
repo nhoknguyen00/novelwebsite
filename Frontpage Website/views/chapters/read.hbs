@@ -1,0 +1,23 @@
+{{>header-area}}
+<!-- chapter start-->
+<link rel="stylesheet" href="/css/chapter-css.css">
+<hr class="style13">
+<i><p>{{chapter.name}}</p></i>
+<hr class="style13">
+<div class="container">
+    <hr class="chapter-start">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Danh sách chương&nbsp;<span class="caret"></span></button>
+        <ul class="dropdown-menu scrollable-menu" role="menu">
+            {{#each chapterList}}
+                <li><a href="chapters/{{this.id}}">{{this.name}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    </br>
+    </br>
+    </br>
+    <!-- chapter content-->
+    <textarea id="chapterContent" style="border: none; width: 100%; height: 50cm;" readonly>{{chapter.content}}</textarea>
+
+</div>

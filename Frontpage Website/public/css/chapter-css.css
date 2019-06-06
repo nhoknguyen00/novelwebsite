@@ -1,0 +1,68 @@
+p{
+    text-align: center;
+    font-size:2rem;
+    color:black;
+}
+.trans--grow{
+    -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+    transition: width 1s  ease-out;
+    width : 0%;
+}
+.grow{
+    width:100%;
+}
+.hr1{
+    margin-left:0;
+}
+.hr2{
+    margin-right:0;
+}
+/*Author*/
+footer{
+    position:absolute;
+    bottom:0;
+}
+div{
+    width:960px;
+}
+h1{
+    font-size:1.2rem;
+    text-align: center;
+    color:#39d1b4;
+}
+h1 a{
+    font-weight:300;
+    color:#39d1b4;
+    text-decoration:none;
+}
+
+h1 a:hover{
+    font-weight:300;
+    color:#2d9884;
+    text-decoration:none;
+}
+hr.style2 {
+    border-top: 3px double #8c8b8b;
+}
+hr.style13 {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+hr.chapter-start{
+    background: url(https://cdnvn.truyenfull.vn/img/spriteimg_new_white_op.png) 0 -50px no-repeat;
+    width: 277px;
+    height: 34px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+.btn-group{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
