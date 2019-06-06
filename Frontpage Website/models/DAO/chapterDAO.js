@@ -6,6 +6,10 @@ exports.get_chapter_list = ()=>{
     return Chapter.find().populate('story').sort(mysort);
 };
 
+exports.get_newest_chapter_list = async () =>{
+    return Chapter.find().populate('story').sort({createdDate: -1}).limit(5);
+};
+
 exports.get_chapter_by_id = id =>{
     return Chapter.findOne({_id: id}).populate('story');
 };
@@ -20,3 +24,4 @@ exports.get_story_by_chapter = async id => {
   const chapterObj = await Chapter.findOne({_id: id});
   return Story.findOne({_id: chapterObj.story});
 };
+

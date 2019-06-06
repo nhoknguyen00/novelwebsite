@@ -22,12 +22,14 @@ exports.story_list = async function(req,res)
 exports.story_list_by_author = async function(req,res)
 {
     const storyList = await storyDAO.get_story_list_by_author(req.params.id);
+    const author = await authorDAO.get_author_by_id(req.params.id);
     const authorList = await authorDAO.get_author_list();
     const genreList = await genreDAO.get_genre_list();
     res.render('stories/list',{
         pageTitle: 'Danh sách truyện',
         storyList: storyList,
         authorList:authorList,
+        author: author,
         genreList:genreList
     })
 };
@@ -35,11 +37,13 @@ exports.story_list_by_author = async function(req,res)
 exports.story_list_by_genre = async function(req,res)
 {
     const storyList = await storyDAO.get_story_list_by_genre(req.params.id);
+    const genre = await genreDAO.get_genre_by_id(req.params.id);
     const authorList = await authorDAO.get_author_list();
     const genreList = await genreDAO.get_genre_list();
     res.render('stories/list',{
         pageTitle: 'Danh sách truyện',
         storyList: storyList,
+        genre: genre,
         authorList: authorList,
         genreList: genreList
     })

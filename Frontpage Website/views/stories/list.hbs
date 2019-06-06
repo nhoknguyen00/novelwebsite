@@ -6,7 +6,25 @@
 <div class="single-product-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
+        {{#if author}}
+            <div class="row">
+                <h3>Tác giả: {{author.name}}</h3>
+                </br>
+                <textarea style="border: none; overflow:auto; width: 100%; height: 8cm" readonly>{{author.info}}</textarea>
+            </div>
+            </br>
+            <h4>Danh sách truyện của {{author.name}}</h4>
+        {{/if}}
 
+        {{#if genre}}
+            <div class="row">
+                <h3>Thể loại: {{genre.name}}</h3>
+                </br>
+                <textarea style="border: none; overflow:auto; width: 100%; height: 2cm" readonly>{{genre.info}}</textarea>
+            </div>
+            </br>
+            <h4>Danh sách truyện thuộc thể loại {{genre.name}}</h4>
+        {{/if}}
         <div class="row">
             {{#each storyList}}
             <div class="col-md-6 col-sm-6">
@@ -55,7 +73,5 @@
 
 <!-- End page content -->
 
-{{>footer-top}}
-<!-- End footer top area -->
 {{>footer-bot}}
 <!-- End footer bottom area -->

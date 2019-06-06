@@ -7,6 +7,15 @@ exports.get_story_list = ()=>{
     return Story.find().populate('genre author').sort(mysort);
 };
 
+exports.get_most_viewed_story_list = ()=>{
+    return Story.find().populate('genre author').sort({views: -1}).limit(4);
+};
+
+exports.get_finished_story_list = ()=>{
+    return Story.find({finished:"Hoàn thành"}).populate('genre author');
+};
+
+
 exports.get_story_by_id = id =>{
     return Story.findOne({_id: id}).populate('genre author');
 };
