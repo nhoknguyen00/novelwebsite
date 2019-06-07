@@ -14,8 +14,8 @@ exports.story_list = async function(req,res)
     res.render('stories/list',{
         pageTitle: 'Danh sách truyện',
         storyList: storyList,
-        authorList:authorList,
-        genreList:genreList
+        authorList: authorList,
+        genreList: genreList
     })
 };
 
@@ -49,7 +49,7 @@ exports.story_list_by_genre = async function(req,res)
     })
 };
 
-exports.single_story_index = async function(req,res)
+exports.single_story_index_get = async function(req,res)
 {
     const story = await storyDAO.get_story_by_id(req.params.id);
     const chapterList = await chapterDAO.get_chapter_list_by_story(story._id);
@@ -62,4 +62,9 @@ exports.single_story_index = async function(req,res)
         authorList: authorList,
         genreList: genreList
     })
+};
+
+exports.single_story_index_post = async function(req,res)
+{
+
 };

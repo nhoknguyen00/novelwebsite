@@ -1,8 +1,6 @@
 <link rel="stylesheet" href="/css/single-story-css.css">
 {{>header-area}}
 <!-- End header area -->
-{{>site-branding-area}}
-<!-- End site branding area -->
 {{>mainmenu}}
 
 <!-- Page content -->
@@ -19,6 +17,10 @@
                     <strong>Tác giả:</strong><a style="color: black" href="authors/{{story.author.id}}">&nbsp;{{story.author.name}}&nbsp;</a>
                     </br>
                     <strong>Thể loại:</strong><a style="color: black" href="genres/{{story.genre.id}}">&nbsp;{{story.genre.name}}</a>
+                    </br>
+                    <strong>Lượt xem:</strong>&nbsp;{{story.views}}
+                    </br>
+                    <strong>Tình trạng:</strong>&nbsp;{{story.finished}}
                     </br>
                     <div class="newlines">{{story.info}}</div>
                     </br></br>

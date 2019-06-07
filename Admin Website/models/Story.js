@@ -17,6 +17,7 @@ const storySchema = new Schema({
         ref: 'Author'
     },
     finished: {type: String, enum: ['Hoàn thành','Chưa hoàn thành']},
+	views: Number,
     img: String,
 });
 

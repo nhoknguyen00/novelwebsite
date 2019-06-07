@@ -4,11 +4,38 @@
             <div class="col-md-8">
                 <div class="user-menu">
                     <ul>
-                        <li><a href="/"><i class="fa fa-user"></i> My Account</a></li>
-                        <li><a href="/"><i class="fa fa-heart"></i> Wishlist</a></li>
-                        <li><a href="/"><i class="fa fa-user"></i> My Cart</a></li>
-                        <li><a href="/"><i class="fa fa-user"></i> Checkout</a></li>
-                        <li><a href="/"><i class="fa fa-user"></i> Trang chủ</a></li>
+                        {{#if login}}
+                            <li><a data-toggle="modal" data-target="#userProfileModal" >Thông tin cá nhân</a></li>
+                            <div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Thông tin cá nhân</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="col-sm-2 col-md-2">
+                                                <img src="img/customer logo.png"
+                                                     alt="" class="img-rounded img-responsive" />
+                                            </div>
+                                            <blockquote>
+                                                <p>{{curCustomer.username}}</p>
+                                            </blockquote>
+                                            <p>
+                                                <i class="glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;{{curCustomer.email}}
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="/updateProfile"><button type="button" class="btn btn-primary">Chỉnh sửa</button></a>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <li><a href="/logout"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
+                        {{else}}
+                            <li><a href="/login"><i class="fa fa-sign-in"></i>Đăng nhập</a></li>
+                            <li><a href="/register"><i class="glyphicon glyphicon-user">&nbsp;</i>Đăng ký</a></li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>

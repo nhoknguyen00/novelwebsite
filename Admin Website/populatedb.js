@@ -67,6 +67,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true }, function(error) {
     const mvcUser = new User({
         username: 'nhoknguyen00',
         password: '123',
+		email: 'miketuannguyen@gmail.com'
     });
     mvcUser.password = mvcUser.generateHash(mvcUser.password);
 

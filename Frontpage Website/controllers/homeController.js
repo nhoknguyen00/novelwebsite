@@ -19,7 +19,8 @@ exports.get_index = async function(req,res)
         genreList: genreList,
         newestChapterList: newestChapterList,
         mostViewStoryList: mostViewStoryList,
-        finishedStoryList: finishedStoryList
+        finishedStoryList: finishedStoryList,
+        curCustomer: req.user
     })
 };
 

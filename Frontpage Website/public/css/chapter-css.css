@@ -50,13 +50,13 @@ hr.style13 {
     box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
 hr.chapter-start{
-    background: url(https://cdnvn.truyenfull.vn/img/spriteimg_new_white_op.png) 0 -50px no-repeat;
+    background: url("../img/chapterstart.png") 0 -50px no-repeat;
     width: 277px;
     height: 34px;
 }
 
 hr.chapter-name-start{
-    background: url(https://cdnvn.truyenfull.vn/img/spriteimg_new_white_op.png) -200px -27px no-repeat;
+    background: url("../img/chapterstart.png") -200px -27px no-repeat;
     width: 59px;
     height: 20px;
 }
