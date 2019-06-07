@@ -14,7 +14,6 @@ const historySchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    createdDate: {type: Date, default: Date.now() }
 });
 
 const History = mongoose.model('History', historySchema);

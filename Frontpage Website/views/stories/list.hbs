@@ -27,26 +27,30 @@
         {{/if}}
         <div class="row">
             {{#each storyList}}
-            <div class="col-md-6 col-sm-6">
-                <div class="single-shop-product">
+                <div class="col-md-6 col-sm-6">
+                    <div class="single-shop-product">
                         <div class="col-sm-4 col-md-4">
-                            <a href="stories/{{this.id}}"><img width="150" height="150" src="{{this.img}}" alt="" class="img-rounded img-responsive" /></a>
+                            <img width="150" height="150" src="{{this.img}}" alt="" class="img-rounded img-responsive" />
                         </div>
                         <div class="col-sm-8 col-md-8">
                             <blockquote>
-                                <a style="color: black" href="stories/{{this.id}}">{{this.name}}</a>
+                                <form id="plusViewForm" action="stories/{{this.id}}" method="POST">
+                                    <a onclick="this.parentElement.submit()" style="color: black">{{this.name}}</a>
+                                </form>
                                 <a style="color: black" href="stories/list/author/{{this.author.id}}"><small><cite title="Source Title">{{this.author.name}}&nbsp;<span class="fa fa-pencil"></span></cite></small></a>
                             </blockquote>
                             <a style="color: black" href="stories/list/genre/{{this.genre.id}}"><i class="fa fa-book"></i>&nbsp;{{this.genre.name}}</a>
                             </br>
-                            <i class="glyphicon glyphicon-stats"></i>&nbsp;{{this.views}}
+                            <i class="glyphicon glyphicon-eye-open"></i>&nbsp;{{this.views}}
                             </br>
                             <i class="glyphicon glyphicon-check"></i>&nbsp;{{this.finished}}
+                            </br>
                         </div>
+                    </div>
                 </div>
-            </div>
-            </br>
+                </br>
             {{/each}}
+
         </div>
 
         <div class="row">

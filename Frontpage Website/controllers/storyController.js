@@ -66,5 +66,7 @@ exports.single_story_index_get = async function(req,res)
 
 exports.single_story_index_post = async function(req,res)
 {
-
+    await Story.findByIdAndUpdate(req.params.id,{ $inc: { views: 1 } },{});
+    const url = req.params.id;
+    res.redirect(url);
 };

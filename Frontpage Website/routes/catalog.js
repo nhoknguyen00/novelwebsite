@@ -15,6 +15,7 @@ router.get('/stories/list/author/:id',storyController.story_list_by_author);
 router.get('/stories/list/genre/:id',storyController.story_list_by_genre);
 
 //Chapters
-router.get('/chapters/:id', chapterController.read_chapter);
+router.get('/chapters/:id', chapterController.read_chapter_get);
+router.post('/chapters/:id', chapterController.read_chapter_post);
 
 module.exports = router;

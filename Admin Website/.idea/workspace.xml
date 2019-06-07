@@ -2,31 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f653b69-152b-4027-90cf-e91991f2d8a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Frontpage Website/config/passport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontpage Website/controllers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontpage Website/views/users/login.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontpage Website/views/users/register.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/storyController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/storyController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Story.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/populatedb.js" beforeDir="false" afterPath="$PROJECT_DIR$/populatedb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/stories/list.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/stories/list.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontpage Website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/controllers/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/controllers/homeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontpage Website/controllers/chapterController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/controllers/chapterController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontpage Website/controllers/storyController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/controllers/storyController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/models/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/models/story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/public/css/chapter-css.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/public/css/chapter-css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontpage Website/models/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/models/history.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontpage Website/public/css/mycss.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/public/css/mycss.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontpage Website/routes/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/routes/catalog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/views/chapters/read.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/views/chapters/read.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontpage Website/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/views/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/views/partials/footer-bot.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/views/partials/footer-bot.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontpage Website/views/partials/header-area.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/views/partials/header-area.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontpage Website/views/layouts/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/views/layouts/layout.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontpage Website/views/stories/list.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/views/stories/list.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontpage Website/views/stories/single-story.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontpage Website/views/stories/single-story.hbs" afterDir="false" />
     </list>
@@ -44,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/storyController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="95" column="29" lean-forward="true" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+            <state relative-caret-position="324">
+              <caret line="65" column="7" selection-start-line="48" selection-start-column="4" selection-end-line="65" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -53,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/stories/update.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="105" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="105" />
+            <state relative-caret-position="156">
+              <caret line="101" column="85" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -212,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="-24" />
     <option name="width" value="1750" />
     <option name="height" value="1030" />
@@ -223,7 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,17 +228,6 @@
               <item name="Admin Website" type="b2602c69:ProjectViewProjectNode" />
               <item name="Admin Website" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Admin Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Admin Website" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Admin Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Admin Website" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Admin Website" type="b2602c69:ProjectViewProjectNode" />
@@ -289,6 +261,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,16 +320,17 @@
       <workItem from="1559755820295" duration="5748000" />
       <workItem from="1559809768452" duration="13365000" />
       <workItem from="1559904446280" duration="1283000" />
+      <workItem from="1559918705112" duration="4335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51553000" />
+    <option name="totallyTimeSpent" value="55888000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -604,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/stories/update.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="105" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/story.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -622,6 +589,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/userController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -653,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/userController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/stories/list.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -667,10 +634,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/stories/update.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="101" column="85" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/storyController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="95" column="29" lean-forward="true" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+        <state relative-caret-position="324">
+          <caret line="65" column="7" selection-start-line="48" selection-start-column="4" selection-end-line="65" selection-end-column="7" />
         </state>
       </provider>
     </entry>

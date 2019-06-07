@@ -33,7 +33,11 @@
             <div class="col-md-8">
                 <ul>
                     {{#each chapterList}}
-                        <a style="color: black" href="chapters/{{this.id}}"><li>{{this.name}}</li></a>
+                        <form id="historyForm" action="chapters/{{this.id}}"
+                              method="POST">
+                            <a onclick="document.getElementById('historyForm').submit()" style="color: black"><li>{{this.name}}</li></a>
+                            <!--<button type="submit" class="btn btn-light">Xem truyện</button>-->
+                        </form>
                     {{/each}}
                 </ul>
             </div>
