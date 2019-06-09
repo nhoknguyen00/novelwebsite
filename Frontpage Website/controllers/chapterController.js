@@ -25,7 +25,8 @@ exports.read_chapter_post = function(req,res){
             let history = new History({
                 _id: new mongoose.Types.ObjectId(),
                 chapter: mongoose.Types.ObjectId(req.params.id),
-                user: mongoose.Types.ObjectId(req.user._id)
+                user: mongoose.Types.ObjectId(req.user._id),
+                createdDate: Date.now()
             });
             history.save(function(error){
                 if(error) throw error;

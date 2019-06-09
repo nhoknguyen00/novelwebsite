@@ -46,7 +46,11 @@
         <tbody>
         {{#each newestChapterList}}
             <tr>
-                <td><a style="color: black;" href="chapters/{{this.id}}">{{this.name}}</a></td>
+                <td><form id="historyForm" action="chapters/{{this.id}}"
+                          method="POST">
+                    <a onclick="this.parentElement.submit()" style="color: black"><li>{{this.name}}</li></a>
+                    <!--<button type="submit" class="btn btn-light">Xem truyện</button>-->
+                </form></td>
                 <td><a style="color: black;" href="stories/{{this.story.id}}">{{this.story.name}}</a></td>
             </tr>
         {{/each}}
@@ -84,10 +88,6 @@
     </div>
 
 </div>
-
-
-
-
 <!-- End page content -->
 
 {{>footer-bot}}

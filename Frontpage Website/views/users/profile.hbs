@@ -1,0 +1,73 @@
+{{>header-area}}
+<!-- End header area -->
+{{>mainmenu}}
+
+<!-- Page content -->
+<div class="container">
+    <div class="row">
+        <h3>Thông tin người dùng</h3>
+        <hr>
+        <div class="col-sm-2 col-md-2">
+            <img src="img/customer logo.png"
+                 alt="" class="img-rounded img-responsive" />
+        </div>
+        <blockquote>
+            <p>{{curCustomer.username}}</p>
+        </blockquote>
+        <p>
+            <i class="glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;{{curCustomer.email}}
+        </p>
+        <hr>
+    </div>
+</br>
+</br>
+</br>
+    <div class="row">
+        <h3>Danh sách chương đọc gần nhất</h3>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Tên chương</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each histories}}
+                <tr>
+                    <td><form id="historyForm" action="chapters/{{this.chapter.id}}"
+                              method="POST">
+                        <a onclick="this.parentElement.submit()" style="color: black"><li>{{this.chapter.name}}</li></a>
+                        <!--<button type="submit" class="btn btn-light">Xem truyện</button>-->
+                    </form></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        </br></br>
+    </div>
+    <div class="row">
+        <h3>Danh sách truyện đã bookmark</h3>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Tên truyện</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each bookmarks}}
+                <tr>
+                    <td><form id="plusViewForm" action="stories/{{this.story.id}}" method="POST">
+                        <a onclick="this.parentElement.submit()" style="color: black">{{this.story.name}}</a>
+                    </form>
+                        <a href="stories/del-bookmark/{{this._id}}" onclick="return confirm ('Bạn có chắc chắn muốn xóa bookmark ?');" > <i class="fa fa-trash fa-lg" aria-hidden="=true"></i></a>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        </br>
+    </div>
+</div>
+<!-- End page content -->
+
+{{>footer-bot}}
+<!-- End footer bottom area -->

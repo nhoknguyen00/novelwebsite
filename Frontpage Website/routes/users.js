@@ -16,18 +16,22 @@ router.get('/login',function(req,res,next){
         errorMessages: errorMessages,
         successMsg: successMsg});
 });
-
-//POST login
-//router.post('/login', customer_Controller.customer_login_post);
 router.post('/login', passport.authenticate('local.signin',{
     successRedirect: '/',
     failureRedirect: '../login',
     failureFlash:true
 }));
-
-//logout
-router.get('/logout',function(req,res,next){
+router.get('/logout',isLoggedIn,function(req,res,next){
     req.logout();
     res.redirect('/');
 });
+router.get('/profile',isLoggedIn,userController.get_profile);
 module.exports = router;
+
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    req.flash('error', 'Xin hãy đăng nhập để tiếp tục!!');
+    res.redirect('/login');
+}

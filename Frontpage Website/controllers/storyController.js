@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const mongoDB = 'mongodb+srv://nhoknguyen00:1472125514@cluster0-gntax.mongodb.net/mikeweb';
 const Story = require('../models/story');
+const Bookmark = require('../models/bookmark');
 const storyDAO = require('../models/DAO/storyDAO');
 const genreDAO = require('../models/DAO/genreDAO');
 const authorDAO = require('../models/DAO/authorDAO');
@@ -55,12 +56,15 @@ exports.single_story_index_get = async function(req,res)
     const chapterList = await chapterDAO.get_chapter_list_by_story(story._id);
     const authorList = await authorDAO.get_author_list();
     const genreList = await genreDAO.get_genre_list();
+    const bookmark = await Bookmark.find({user: req.user, story: story});
+    console.log(bookmark);
     res.render('stories/single-story',{
         pageTitle: 'Truyện ' + story.name,
         story: story,
         chapterList: chapterList,
         authorList: authorList,
-        genreList: genreList
+        genreList: genreList,
+        checkBookmark: bookmark.length > 0
     })
 };
 
@@ -69,4 +73,26 @@ exports.single_story_index_post = async function(req,res)
     await Story.findByIdAndUpdate(req.params.id,{ $inc: { views: 1 } },{});
     const url = req.params.id;
     res.redirect(url);
+};
+
+exports.add_bookmark = function(req,res){
+    mongoose.connect(mongoDB, function(error){
+        if(error)
+            throw error;
+        let bookmark = new Bookmark({
+            _id: new mongoose.Types.ObjectId(),
+            story: mongoose.Types.ObjectId(req.params.id),
+            user: mongoose.Types.ObjectId(req.user._id),
+        });
+        bookmark.save(function(error){
+            if(error) throw error;
+        });
+    });
+};
+
+exports.del_bookmark = function(req,res) {
+    Bookmark.findByIdAndRemove(req.params.id,function (err) {
+        if(err){return next(err);}
+        res.redirect("../../profile");
+    });
 };

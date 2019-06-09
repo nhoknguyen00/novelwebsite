@@ -1,5 +1,7 @@
 const Chapter = require('../chapter');
 const Story = require('../story');
+const User = require('../user');
+const History = require('../history');
 
 exports.get_chapter_list = ()=>{
     var mysort = {name:1};
@@ -21,7 +23,12 @@ exports.get_chapter_list_by_story = async id => {
 };
 
 exports.get_story_by_chapter = async id => {
-  const chapterObj = await Chapter.findOne({_id: id});
-  return Story.findOne({_id: chapterObj.story});
+    const chapterObj = await Chapter.findOne({_id: id});
+    return Story.findOne({_id: chapterObj.story});
+};
+
+exports.get_read_chapters = async id => {
+    const userObj = await User.findOne({_id: id});
+    return History.find({user: userObj}).populate('chapter').sort({createdDate: -1}).limit(8);
 };
 

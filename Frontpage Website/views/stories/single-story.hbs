@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/single-story-css.css">
+<script src="/js/single-story-js.js"></script>
 {{>header-area}}
 <!-- End header area -->
 {{>mainmenu}}
@@ -12,8 +13,20 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="profile-head">
-                    <h2>{{story.name}}</h2>
+                <div id="storyProfileArea" class="profile-head">
+                    <h2>{{story.name}}
+                        {{#if login}}
+                            {{#if checkBookmark}}
+                                <i onclick="markedMes();" class="glyphicon glyphicon-bookmark"></i>
+                            {{else}}
+                                <form id="markForm" action="stories/add-bookmark/{{story.id}}" method="POST">
+                                    <a id="markSign" class="fa fa-bookmark-o" onclick="mark()" style="color: black">{{this.name}}</a>
+                                </form>
+                            {{/if}}
+                        {{else}}
+                            <i onclick="loginToMark();" class="fa fa-bookmark-o"></i>
+                        {{/if}}
+                    </h2>
                     <strong>Tác giả:</strong><a style="color: black" href="authors/{{story.author.id}}">&nbsp;{{story.author.name}}&nbsp;</a>
                     </br>
                     <strong>Thể loại:</strong><a style="color: black" href="genres/{{story.genre.id}}">&nbsp;{{story.genre.name}}</a>
@@ -35,7 +48,7 @@
                     {{#each chapterList}}
                         <form id="historyForm" action="chapters/{{this.id}}"
                               method="POST">
-                            <a onclick="document.getElementById('historyForm').submit()" style="color: black"><li>{{this.name}}</li></a>
+                            <a onclick="this.parentElement.submit()" style="color: black"><li>{{this.name}}</li></a>
                             <!--<button type="submit" class="btn btn-light">Xem truyện</button>-->
                         </form>
                     {{/each}}

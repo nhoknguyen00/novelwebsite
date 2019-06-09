@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const mongoDB = 'mongodb+srv://nhoknguyen00:1472125514@cluster0-gntax.mongodb.net/mikeweb';
 const User = require('../models/user');
+const chapterDAO = require('../models/DAO/chapterDAO');
+const storyDAO = require('../models/DAO/storyDAO');
+const authorDAO = require('../models/DAO/authorDAO');
+const genreDAO = require('../models/DAO/genreDAO');
 
 exports.register_get = function(req,res)
 {
@@ -47,4 +51,20 @@ exports.register_post = async function(req,res)
             });
         }
     }
+};
+
+exports.get_profile = async function(req,res)
+{
+    const histories = await chapterDAO.get_read_chapters(req.user._id);
+    const bookmarks = await storyDAO.get_bookmark_stories(req.user._id);
+    const authorList = await authorDAO.get_author_list();
+    const genreList = await genreDAO.get_genre_list();
+    res.render('users/profile',{
+        pageTitle: 'Thông tin người dùng',
+        histories: histories,
+        bookmarks: bookmarks,
+        curCustomer: req.user,
+        authorList: authorList,
+        genreList: genreList,
+    });
 };
