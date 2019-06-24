@@ -58,8 +58,13 @@ exports.author_update_post = function(req,res)
 
 exports.author_delete = function(req,res)
 {
-    Author.findByIdAndRemove(req.params.id,function (err) {
+    var author = new Author({
+        _id: req.params.id,
+        isDeleted: true
+    });
+
+    Author.findByIdAndUpdate(req.params.id,author,{},function(err){
         if(err){return next(err);}
-        res.redirect("../list");
+        res.redirect('../list');
     })
 };

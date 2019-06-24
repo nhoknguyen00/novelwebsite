@@ -57,8 +57,8 @@
                 <tr>
                     <td><form id="plusViewForm" action="stories/{{this.story.id}}" method="POST">
                         <a onclick="this.parentElement.submit()" style="color: black">{{this.story.name}}</a>
-                    </form>
                         <a href="stories/del-bookmark/{{this._id}}" onclick="return confirm ('Bạn có chắc chắn muốn xóa bookmark ?');" > <i class="fa fa-trash fa-lg" aria-hidden="=true"></i></a>
+                    </form>
                     </td>
                 </tr>
             {{/each}}

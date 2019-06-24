@@ -12,7 +12,8 @@ const chapterSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Story'
     },
-    createdDate: {type: Date, default: Date.now() }
+    createdDate: {type: Date, default: Date.now()},
+    isDeleted: {type: Boolean, default: false}
 });
 
 const Chapter = mongoose.model('Chapter', chapterSchema);

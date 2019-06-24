@@ -19,6 +19,7 @@ const storySchema = new Schema({
     finished: {type: String, enum: ['Hoàn thành','Chưa hoàn thành']},
 	views: Number,
     img: String,
+    isDeleted:{type: Boolean, default:false}
 });
 
 const Story = mongoose.model('Story', storySchema);

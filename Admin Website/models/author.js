@@ -7,7 +7,8 @@ const Schema = mongoose.Schema;
 const authorSchema = new Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
-    info: String
+    info: String,
+    isDeleted:{type: Boolean, default:false}
 });
 
 const Author = mongoose.model('Author', authorSchema);

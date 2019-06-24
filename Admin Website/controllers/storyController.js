@@ -99,8 +99,14 @@ exports.story_update_post = function(req,res)
 
 exports.story_delete = function(req,res)
 {
-    Story.findByIdAndRemove(req.params.id,function (err) {
+    var story = new Story({
+        _id: req.params.id,
+        name: req.body.name,
+        isDeleted: true
+    });
+
+    Story.findByIdAndUpdate(req.params.id,story,{},function(err){
         if(err){return next(err);}
-        res.redirect("../list");
+        res.redirect('../list');
     })
 };

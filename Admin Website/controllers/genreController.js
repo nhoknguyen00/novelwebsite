@@ -58,8 +58,13 @@ exports.genre_update_post = function(req,res)
 
 exports.genre_delete = function(req,res)
 {
-    Genre.findByIdAndRemove(req.params.id,function (err) {
+    var genre = new Genre({
+        _id: req.params.id,
+        isDeleted: true
+    });
+
+    Genre.findByIdAndUpdate(req.params.id,genre,{},function(err){
         if(err){return next(err);}
-        res.redirect("../list");
+        res.redirect('../list');
     })
 };

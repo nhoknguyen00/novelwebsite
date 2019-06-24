@@ -78,3 +78,11 @@ span.story-name{
     width: 59px;
     height: 20px;
 }
+
+pre.chapter-content{
+    font-family: Arial;
+    font-size: medium;
+    border: none;
+    background-color: white;
+    white-space: pre-wrap;
+}

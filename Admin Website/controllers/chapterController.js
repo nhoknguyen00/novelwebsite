@@ -7,11 +7,9 @@ const chapterDAO = require('../models/DAO/chapterDAO');
 exports.chapter_list = async function(req,res)
 {
     const chapterList = await chapterDAO.get_chapter_list();
-    //const storyList = await storyDAO.get_story_list();
     res.render('chapters/list',{
         pageTitle: 'Danh sách chương',
         chapterList: chapterList,
-        //storyList: storyList,
     })
 };
 
@@ -81,8 +79,13 @@ exports.chapter_update_post = function(req,res)
 
 exports.chapter_delete = function(req,res)
 {
-    Chapter.findByIdAndRemove(req.params.id,function (err) {
+    var chapter = new Chapter({
+        _id: req.params.id,
+        isDeleted: true
+    });
+
+    Chapter.findByIdAndUpdate(req.params.id,chapter,{},function(err){
         if(err){return next(err);}
-        res.redirect("../list");
+        res.redirect('../list');
     })
 };
